@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<title></title>
+		</head>
+		<body>
+			<h2>Create A Class:</h2>
+			<form method="POST" action="/api/createClass">
+				<input type="hidden" name="username" value="{{teacher}}" />
+
+				<h3>Name of class:</h3>
+				<input type="text" name="name" placeholder="Enter The Class Name" />
+
+				<h3>Room:</h3>
+				<input type="text" name="room" placeholder="Enter The Room" />
+				<br>
+				<br>
+				<input type="submit" name="submit" />
+			</form>
+		</body>
+	</html>
+{% endblock %}
